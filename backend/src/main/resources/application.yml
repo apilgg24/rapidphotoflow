@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: rapidphotoflow-backend
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 500MB
+
+# Logging configuration
+logging:
+  level:
+    root: INFO
+    com.rapidphotoflow: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
