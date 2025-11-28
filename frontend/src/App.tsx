@@ -122,7 +122,6 @@ export default function App() {
   }, [photos, addEvent]);
 
   const handlePhotosDeleted = useCallback((ids: string[]) => {
-    const deletedPhotos = photos.filter(p => ids.includes(p.id));
     setPhotos(prev => prev.filter(p => !ids.includes(p.id)));
     ids.forEach(id => prevStatusMap.current.delete(id));
     
